@@ -9,7 +9,7 @@ provider "aws" {
   # version = "~> 2.0"
 }
 
-resource "aws_launch_configuration" "example" {
+resource "aws_launch_configuration" "ClaimVision" {
   image_id        = "ami-0c55b159cbfafe1f0"
   instance_type   = "t2.micro"
   security_groups = [aws_security_group.instance.id]
@@ -27,8 +27,8 @@ resource "aws_launch_configuration" "example" {
   }
 }
 
-resource "aws_autoscaling_group" "example" {
-  launch_configuration = aws_launch_configuration.example.name
+resource "aws_autoscaling_group" "ClaimVision" {
+  launch_configuration = aws_launch_configuration.ClaimVision.name
   vpc_zone_identifier  = data.aws_subnet_ids.default.ids
 
   target_group_arns = [aws_lb_target_group.asg.arn]
@@ -39,7 +39,7 @@ resource "aws_autoscaling_group" "example" {
 
   tag {
     key                 = "Name"
-    value               = "terraform-asg-example"
+    value               = "terraform-asg-ClaimVision"
     propagate_at_launch = true
   }
 }
