@@ -1,6 +1,6 @@
 pipeline {
     agent any
-     
+
     stages {
   stage('s3 - create bucket'){
   steps{
@@ -33,5 +33,6 @@ pipeline {
            }
         }
     }
+}
 }
 
