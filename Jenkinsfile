@@ -1,6 +1,12 @@
 pipeline {
     agent any
-
+     
+    stages {
+  stage('s3 - create bucket'){
+  steps{
+  sh "ansible-playbook s3-bucket.yml"
+      }
+    }
     stages {
         stage('Checkout') {
             steps {
