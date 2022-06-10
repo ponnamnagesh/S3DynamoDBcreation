@@ -1,8 +1,6 @@
 resource "aws_s3_bucket" "terraform_state" {
    bucket = "Terraform-Jenkins-Ansible-S3"
    acl = "private"
-   lifecycle {
-      create_
    versioning {
       enabled = true
    }
