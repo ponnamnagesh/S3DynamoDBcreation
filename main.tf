@@ -144,14 +144,3 @@ resource "aws_security_group" "alb" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-resource "aws_s3_bucket" "onebucket" {
-   bucket = "Terraform-Jenkins-Ansible-S3"
-   acl = "private"
-   versioning {
-      enabled = true
-   }
-   tags = {
-     Name = "Bucket1"
-     Environment = "Test"
-   }
-}
