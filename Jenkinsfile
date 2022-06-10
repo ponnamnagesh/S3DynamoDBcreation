@@ -2,11 +2,11 @@ pipeline {
     agent any
     
     stages {
-        stage ('s3 - create bucket') {
-            steps {
-                sh ('ansible-playbook s3-bucket.yml')
-             }
-        }
+        //stage ('s3 - create bucket') {
+          //  steps {
+               // sh ('ansible-playbook s3-bucket.yml')
+             //}
+       //}
         stage('Checkout') {
             steps {
             checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ponnamnagesh/TerraformJenkinsS3Ansible']]])            
