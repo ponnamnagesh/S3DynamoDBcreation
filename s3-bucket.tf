@@ -24,8 +24,8 @@ resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
 terraform {
   backend "s3" {
     encrypt = true    
-    bucket = "hella-buckets"
-    dynamodb_table = "Terraform-Jenkins-Ansible-S3"
+    bucket = "Terraform-Jenkins-Ansible-S3"
+    dynamodb_table = "terraform-state-lock-dynamo"
     key    = "terraform.tfstate"
     region = "us-east-2"
   }
