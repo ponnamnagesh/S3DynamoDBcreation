@@ -23,13 +23,15 @@ resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
     type = "S"
   }
 }
-terraform {
-  backend "s3" {
-    encrypt = true    
-    bucket = "Terraform-Jenkins-Ansible-S3"
-    dynamodb_table = "terraform-state-lock-dynamo"
-    key    = "terraform.tfstate"
-    region = "us-east-2"
+/*
+      #terraform {
+  #backend "s3" {
+    #encrypt = true    
+    #bucket = "Terraform-Jenkins-Ansible-S3"
+    #dynamodb_table = "terraform-state-lock-dynamo"
+    #key    = "terraform.tfstate"
+    #region = "us-east-2"
   }
 }
+*/
 
