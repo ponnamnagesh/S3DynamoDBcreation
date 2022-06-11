@@ -19,10 +19,9 @@ resource "aws_s3_bucket" "terraform_state" {
   #attribute {
    # name = "LockID"
    # type = "S"
-  }
-}
-/#
-/*
+  #}
+#}
+
       #terraform {
   #backend "s3" {
     #encrypt = true    
