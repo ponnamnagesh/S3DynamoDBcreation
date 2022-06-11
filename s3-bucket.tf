@@ -10,7 +10,7 @@ resource "aws_s3_bucket" "terraform_state" {
    }
 }
 
-\# resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
+# resource "aws_dynamodb_table" "dynamodb-terraform-state-lock" {
   #name = "terraform-state-lock-dynamo"
   #hash_key = "LockID"
   #read_capacity = 20
@@ -29,7 +29,6 @@ resource "aws_s3_bucket" "terraform_state" {
     #dynamodb_table = "terraform-state-lock-dynamo"
     #key    = "terraform.tfstate"
     #region = "us-east-2"
-  }
-}
-*/
+  #}
+#}
 
