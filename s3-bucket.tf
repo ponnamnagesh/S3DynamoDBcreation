@@ -1,9 +1,6 @@
 resource "aws_s3_bucket" "terraform_state" {
    bucket = "terraform-jenkins-ansible-s3"
    acl = "private"
-   versioning {
-      enabled = true
-   }
    tags = {
      Name = "Bucket1"
      Environment = "Test"
