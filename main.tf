@@ -5,8 +5,6 @@ terraform {
 provider "aws" {
       #access_key = "${var.aws_access_key}"
     #secret_key = "${var.aws_secret_key}"
-   access_key = "AKIAQCGTK5SOJFMTTE52"
-   secret_key = "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"
   region = "us-east-2"
 
   # Allow any 2.x version of the AWS provider
