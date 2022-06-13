@@ -41,13 +41,13 @@
   #}
 #}
 
-resource "aws_s3_bucket_versioning" "terraform_state" {
+resource "aws_s3_bucket" "terraform_state" {
   bucket = "great-name-terraform-state-2222"
   # Enable versioning so we can see the full revision history of our
   # state files
-  versioning {
-    enabled = true
-  }
+  #versioning {
+    #enabled = true
+  #}
   server_side_encryption_configuration {
     rule {
       apply_server_side_encryption_by_default {
