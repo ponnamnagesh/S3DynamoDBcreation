@@ -65,7 +65,7 @@ data "aws_vpc" "default" {
 
 data "aws_subnets" "default" {
   #vpc_id = data.aws_vpc.default.id
-  vpc_id     = aws_vpc.main.id
+  #vpc_id     = aws_vpc.main.id
 }
 
 resource "aws_lb" "example" {
