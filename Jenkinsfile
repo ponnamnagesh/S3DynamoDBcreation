@@ -9,7 +9,8 @@ pipeline {
        //}
         stage('Checkout') {
             steps {
-            checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'git@github.com:ponnamnagesh/TerraformJenkinsS3Ansible.git']]])            
+            //checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'git@github.com:ponnamnagesh/TerraformJenkinsS3Ansible.git']]])            
+              git([url: 'git@github.com:ponnamnagesh/TerraformJenkinsS3Ansible.git', branch: 'main', credentialsId: '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'])
 
           }
         }    
