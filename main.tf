@@ -19,9 +19,9 @@ resource "aws_s3_bucket" "terraform_state" {
 
   # Enable versioning so we can see the full revision history of our
   # state files
-  versioning {
-    enabled = true
-  }
+  #versioning {
+   # enabled = true
+  #}
 
   # Enable server-side encryption by default
   #server_side_encryption_configuration {
@@ -31,6 +31,12 @@ resource "aws_s3_bucket" "terraform_state" {
       #}
     #}
   #}
+}
+resource "aws_s3_bucket_versioning" "versioning_example" {
+  bucket = var.bucket_name
+  versioning_configuration {
+    status = "Enabled"
+  }
 }
 
 resource "aws_dynamodb_table" "terraform_locks" {
